@@ -1,0 +1,11 @@
+                              GENERAL NOTES ABOUT INTERFACE OBJECTS
+                              -------------------------------------
+              
+The objects in interfaces are different from any other crp objects for the following reasons.
+
+	- These objects are the only means with which any two crp components talk to each other
+	- 
+	- All the objects should strictly implement CommInterface and ObjectFactory interface methods
+	- Any new variable added to the interface objects should make sure that the getObjectSize results in the
+	  the correct object size.
+	- 

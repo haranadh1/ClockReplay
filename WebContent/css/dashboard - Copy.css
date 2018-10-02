@@ -1,0 +1,73 @@
+/* the style for dashboard is layed out in the following way
+ * the screen has two big rounded rectangles and followed by
+ * five smaller rounded rectangles
+ * we have different styles for different sized rounded rectangles(rr for short)
+ * Each bigger rr is partitioned into three sections
+ *     1. header ( project name is displayed here )
+ *     2. footer ( current stage of the project, capture, replay, analysis etc)
+ *     3. summary( summary data for capture/replay/analyzer;the middle portion )
+ *
+ */
+
+.bodydashboard
+{
+	background-color:#fffaf1;	
+}
+.rrhdrtext
+{
+	text-align:center; 
+	color:black; 
+	font-family:Georgia, serif;
+	font-size:16px;
+}
+.rrftrtext
+{
+	text-align:center; 
+	color:#800080; 
+	font-family:Georgia, serif;
+	font-size:40px;
+}
+.rrmidtext
+{
+	text-align:left; 
+	color:black; 
+	font-family:Georgia, serif;
+	font-size:16px;
+	font-weight: bold; 
+}
+div.bigr
+{
+	top:20px;
+	width:630px;
+	left:80px;
+	margin:10px;
+	height:430px;
+	float:left;
+}
+div.bigrrmid
+{
+	top:60px;
+	width:630px;
+	position:absolute;
+	left:30px;
+	z-index:1;
+}
+
+div.bigrrftr
+{
+	top:295px;
+	width:630px;
+	margin:20px;
+	position:absolute;
+	z-index:1;
+}
+div.smallr
+{
+	left:125px;
+	width:200px;
+	padding:10px;
+	margin:10px;
+	height:137px;
+	float:left;
+}
+

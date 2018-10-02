@@ -1,0 +1,20 @@
+/*CSS for 2 demos on the page*/
+#orbs li{
+width: 65px; /*width of image container. Should be wider than contained images (before bubbling) */
+height:60px; /*height of image container. Should be taller than contained images (before bubbling) */
+}
+
+#orbs li img{
+width: 55px; /*width of each image before bubbling*/
+height: 60px; /*height of each image*/
+}
+
+#squares li{
+width: 45px; /*width of image container. Must be wider than contained images (before bubbling) */
+height:40px; /*height of image container. Must be taller than contained images (before bubbling) */
+}
+
+#squares li img{
+width: 31px; /*width of each image before bubbling*/
+height: 31px; /*height of each image*/
+}

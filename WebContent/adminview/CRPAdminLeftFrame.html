@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>CRP Admin Menu</title>
+		<script type="text/javascript" src="../js/ApplicationLeftFrame.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/ApplicationLeftFrame.css">
+		<link type="text/css" href="../css/custom-theme/jquery-ui-1.8.14.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="../js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-ui-1.8.14.custom.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				// Accordion
+				$("#accordion").accordion({
+					header : "h3"
+				});
+			});
+
+			function show(link){
+			parent.contentframe.location.href=link;
+			//alert(link);
+			}
+		</script>
+		<style type="text/css">
+			/*demo page css*/
+			body {
+				font: 62.5% "Trebuchet MS", sans-serif;
+				margin: 15px;				
+			}
+			.demoHeaders {
+				margin-top: 2.5em;
+			}
+			/*override accordion style to hide icons*/
+			#accordion .ui-icon { display: none; }
+			#accordion .ui-accordion-header a { padding-left:5; }
+		</style>
+	</head>
+	<body bgcolor="#fffaf1">
+		<!-- Accordion -->
+		<div id="accordion">
+			<div>
+				<h3><a href="#" onclick="javascript:show('viewNodes.jsp');">Node Pool</a></h3>
+			</div>
+			<div>
+				<h3><a href="#" onclick="javascript:show('captures2.jsp');">Capture</a></h3>
+			</div>
+			<div>
+				<h3><a href="#" onclick="javascript:show('replays2.jsp');">Replay</a></h3>
+			</div>
+			<div>
+				<h3><a href="#" onclick="javascript:show('viewUsers.jsp');">Users</a></h3>
+			</div>
+			<div>
+				<h3><a href="#" onclick="javascript:show('viewProjects.jsp');">Projects</a></h3>
+			</div>
+			<div>
+				<h3><a href="#" onclick="javascript:show('security.jsp');">Security</a></h3>
+			</div>
+			<div>
+				<h3><a href="#" onclick="javascript:show('configure.jsp');">Configure</a></h3>
+			</div>
+			<div>
+				<h3><a href="#" onclick="javascript:show('serverLogs.jsp');">Server Logs</a></h3>
+			</div>
+		</div>
+	</body>
+</html>

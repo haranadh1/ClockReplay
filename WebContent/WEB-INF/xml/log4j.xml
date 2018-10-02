@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/' threshold="debug">  
+  <appender name="ASYNCH" class="org.apache.log4j.AsyncAppender">
+        <appender-ref ref="DEBUG_LOG_FILE" />
+    </appender>
+    
+    <appender name="DEBUG_LOG_FILE"  
+class="org.apache.log4j.RollingFileAppender">
+<param name="Append" value="true" />
+<param name="File" value="${user.dir}/logs/ClockReplay.log" />
+<param name="MaxFileSize" value="10000KB" />
+<param name="MaxBackupIndex" value="20" />
+ 	<layout class="org.apache.log4j.PatternLayout">
+ <param name="ConversionPattern" value="%d{yyyy-MM-dd hh:mm:ss,SSS   %5p [%t] %c - %m%n"/>
+</layout>
+     </appender>
+
+    <!-- Defining the priorities -->
+    <category name="DEBUG" additivity="false">
+        <priority value="debug"/>
+        <appender-ref ref="DEBUG_LOG_FILE"/>
+    </category>
+
+    <root>
+        <level value ="debug" />
+        <!--Testing Async-->
+        <appender-ref ref="ASYNCH" />
+    </root>
+</log4j:configuration>

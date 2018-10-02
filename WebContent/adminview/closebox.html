@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Example: Closable Message Boxes</title>
+<script>
+function closeBox(toClose) {
+   document.getElementById(toClose).style.display = "none";
+}
+function loadMsg(msgClass) {
+   msg = document.getElementsByTagName("div");
+   for (i=0; i<msg.length; i++) {
+      if(msg[i].className == msgClass) {
+         if(document.cookie.indexOf(msg[i].id) == -1) {
+            msg[i].style.display = "block";
+         }
+      }
+   }
+}
+</script>
+<style>
+   body {
+      font: small/1.2 Arial, Helvetica, sans-serif;
+     }
+   /* These are the styles for the message box. */   
+   .msgbox {
+      opacity:0.5;
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 25%;
+      width: 50%;
+      height:40px;
+      background-color:#fbf9ee;
+      border: 1px solid #fcefa1;
+      border-radius:5px;
+      color: #363636;
+      font-size:15px;
+      font-weight: bold; }
+   .msgbox p {
+      margin: 0;
+      padding: 5px 10px; }
+   .msgbox a.close {
+      float: right;
+      text-decoration: none;
+      font-weight: bold;
+      color: red;
+      background-color: #fff;
+      border: 1px solid #ff0000;
+      //border-bottom: 1px solid #333;
+      border-redius:2px;
+      padding: 0 4px;
+      margin-left: 5px; }
+</style>
+</head>
+<body onload="loadMsg('msgbox');">
+   <div id="message-1" class="msgbox">
+      <a href="#" class="close" onclick="closeBox('message-1'); return false;" title="Close">X</a>
+      <img src="../images/info.png" width=25 height=25 style="float:left;padding:4px"><p style="float:left;padding:4px;margin-top:5px"><%=request.getParameter("msg")%>.</p>
+   </div>
+</body>
+</html>

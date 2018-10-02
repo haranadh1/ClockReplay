@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="stylesheet" href="../css/jquery.ui.all.css">
+		<link rel="stylesheet" href="../css/demos.css">
+		<title>Update Project</title>
+		<style>
+			legend {
+				background-color: #DDD;
+				z-index: 12;
+			}
+			body {
+				background-color: #fffaf1;
+				font-size: 75.5%;
+			}
+			label, input {
+				display: block;
+			}
+			select.text, input.text {
+				margin-bottom: 12px;
+				width: 235px;
+				padding: .4em;
+			}
+			fieldset {
+				padding: 10px;
+				border: 5px;
+				margin-top: 50px;
+				margin-bottom: 50px;
+				margin-left: 25%;
+				margin-right: 75%;
+				background-color: #EEE;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="project-form">
+			<form action="updateProject.jsp">
+				<fieldset>
+					<legend align="center">
+						Update Project
+					</legend>
+					<label for="pid">Project ID</label>
+					<input type="text" name="pid" id="pid" class="text ui-widget-content ui-corner-all" />
+					<label for="proj_name">Project Name</label>
+					<input type="text" name="project_name" id="name" class="text ui-widget-content ui-corner-all" />
+					
+					
+					<label for="users">Users</label>
+					<select name="users" style="width: 20em;" class="text ui-widget-content ui-corner-all" size="4" multiple="true">
+						<option>--select--</option>
+						<option>satyam</option>
+						<option>satya</option>
+					</select>
+					
+					<br>
+					<button id="update-user" type="submit">
+						Update project
+					</button>
+					<button id="cancel" type="reset">
+						Cancel
+					</button>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
